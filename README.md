@@ -28,4 +28,4 @@ To analyze the distinction among the two models Accuracy as a primary metric was
 The improvement can be made not only in the Auto ML process by not using the cleaned data function (train.py) and leave the featurization to the Auto ML run (to handle the Imbalanced data), but also in the Scikit-Learn process by using other algorithm and testing other configuration to tune the hyperparameters.
 
 ## Proof of cluster clean up
-!(https://github.com/gunisha30/Optimizing_MLPipeline_Azure/blob/main/deleteinstance.png?raw=true)
+![image](https://github.com/gunisha30/Optimizing_MLPipeline_Azure/blob/main/deleteinstance.png)
