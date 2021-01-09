@@ -19,13 +19,14 @@ As already stated above, a comparison is done between the performance of the Log
 
 ## AutoML
 1. Data Preparation- The same steps followed in Scikit Learn pipeline were adopted here. 
-2. Configure AutoML Run- Here the type of the task: Classification, the primary metric: Accuracy, the data, the column to be predicted and the constraints were specified. Finally Call the submit method on the experiment object and pass the run configuration. Once finished, register the model for future use. In this case, the best model was generated using LightGBM Algorithm which gave an Accuracy of 0.9149 
+2. Configure AutoML Run- Here the type of the task: Classification, the primary metric: Accuracy, the training data, the column to be predicted,number of cross validations, total timeout time and the compute target were specified. Finally Call the submit method on the experiment object and pass the run configuration. Once finished, register the model for future use. The output of this run will display a list of all pipelines executed by autoML along with their repective run duration and metric value. 18 such pipelines were given as an output. In this case, the best model was generated using LightGBM Algorithm which gave an Accuracy of 0.9149 
 
 ## Pipeline comparison
-To analyze the distinction among the two models Accuracy as a primary metric was used and the outcome was that Auto ML provides more high-grade performance. This result is coherent mostly because Auto ML run not only test more hyperparameter value than the Scikit-learn process but also more algorithms too.
+To analyze the distinction among the two models Accuracy as a primary metric was used and the outcome was that Auto ML provides more high-grade performance. This result is coherent mostly because Auto ML run not only test more hyperparameter value than the Scikit-learn process but also more algorithms too. 
 
 ## Future work
-The improvement can be made not only in the Auto ML process by not using the cleaned data function (train.py) and leave the featurization to the Auto ML run (to handle the Imbalanced data), but also in the Scikit-Learn process by using other algorithm and testing other configuration to tune the hyperparameters.
+The improvement can be made not only in the Auto ML process by not using the cleaned data function (train.py) and leave the featurization to the Auto ML run (to handle the Imbalanced data), but also in the Scikit-Learn process by using other algorithm and testing other configuration to tune the hyperparameters. There was an issue in the dataset that it was an imbalanced one, wherein one target label has more entries than the others. Resolving this issue will give better prediction outputs. 
+Thirdly, the evaluation metric could be changed from Accuracy to other metrics such as Precision, Recall, etc. to compare and better analyze the model's performance. It would be helpful because it is better to judge a model on multiple metrics instead of a single one.
 
 ## Proof of cluster clean up
 ![image](https://github.com/gunisha30/Optimizing_MLPipeline_Azure/blob/main/deleteinstance.png)
